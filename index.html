@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https: //fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="tudo">
+    <header class="cabecalho">
+        <h1 class="name">Calculadora IMC</h1>
+        <div class="redes__social">
+            <a href="https://www.instagram.com/joao.victorsilva14/" class="link"><img src="./img/instagram.png" alt="instagram" width="30"></a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-da-silva-cardoso-b66315248/" class="link"><img src="./img/linkedin.png" alt="linkedin" width="30"></a>
+        </div>
+    </header>
+    
+    <main class="container">
+
+        <div class="container__principal">
+            <div class="container__titulos">
+                <h1 class="titulo__imc"></h1>
+            </div>
+            <div class="container__input">
+                <label class="titulo__input">Peso em kg</label>
+                <input type="number" min="1" max="10" class="peso" placeholder="ex: 85">
+                <label class="titulo__input">Altura em metros</label>
+                <input type="number" min="1" max="10" class="altura" placeholder="ex: 1.80">
+            </div>
+            <div class="container__botao">    
+                <button onclick="calcularImc()" class="botao">Calcular IMC</button>
+            </div>
+            <div class="resposta">
+                <div class="separacao">
+                    <p id="IMC" class="resultado">0.00</p>
+                    <p class="Seu" class="resultado">Seu IMC</p>
+                </div>
+                <p id="IMC__aviso" class="resultado">AVISO</p>
+            </div>
+        </div>
+
+        <div class="container__esquerdo">
+
+            <div class="informacao">
+                <h2 class="titulo">O que significa IMC</h2>
+                <p class="texto">IMC é a sigla de Índice de Massa Corporal, um parâmetro que é utilizado para avaliar se o peso está dentro do valor ideal para a altura. 
+
+                Isso significa que, a partir do resultado do IMC é possível saber se a pessoa está acima ou abaixo do peso recomendado e também diagnosticar problemas de saúde como obesidade ou desnutrição.
+                    
+                O IMC pode ser utilizado em crianças, adolescentes, adultos ou idosos. </p>
+            </div>
+
+            <div class="container__tabela">
+                <h2 class="titulo">Como interpretar o resultado de IMC</h2>
+                <p class="texto">Depois de obter o resultado de IMC, deve-se interpretar o valor utilizando a seguinte tabela:</p>
+                <table class="tabela">
+                    <tr><td class="titulo__tabela">IMC</td> <td class="titulo__tabela">classificação</td></tr>
+                    <tr><td class="classificação__tabela">abaixo de 18,5</td> <td class="classificação__tabela">abaixo do peso</td></tr>
+                    <tr><td class="classificação__tabela">entre 18,6 e 24,9</td> <td class="classificação__tabela">peso ideal</td></tr>
+                    <tr><td class="classificação__tabela">entre 25,0 e 29,9</td> <td class="classificação__tabela">levemente acima do peso</td></tr>
+                    <tr><td class="classificação__tabela">entre 30,0 e 34,9</td> <td class="classificação__tabela">obesidade grau 1</td></tr>
+                    <tr><td class="classificação__tabela">entre 35,0 e 39,0</td> <td class="classificação__tabela">obesidade grau 2</td></tr>
+                    <tr><td class="classificação__tabela">acima de 40</td> <td class="classificação__tabela">obesidade 3</td></tr>
+                </table>
+                <p class="texto">De acordo com o resultado de IMC também é possível prever o risco que cada pessoa tem de desenvolver doenças crônicas. Isto porque quanto maior é o valor do IMC, maior é a quantidade de gordura acumulada no corpo e maior o risco de doenças como pressão alta, diabetes e problemas cardíacos.</p>
+            </div>
+
+           
+        </div>
+
+     </main>
+
+     <script src="app.js" defer></script>
+
+     <footer class="rodape">
+        <h1 class="name">João Victor</h1>
+     </footer>
+    </div>
+</body>
+</html>
